@@ -4,9 +4,6 @@
   - name: Run container
     ansible.builtin.shell: |
       echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
-  - name: Create a data container
-  community.docker.docker_container:
-    name: example
-    image: ghcr.io/permeenev/java-tomcat-maven-example:0.3
-    exposed_ports:
-      - 8080
+- name: Run container
+    ansible.builtin.shell: |
+      docker run -d -p 8080:8080 ghcr.io/permeenev/java-tomcat-maven-example:0.3
