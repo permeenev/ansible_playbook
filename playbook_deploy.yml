@@ -15,6 +15,5 @@
     docker_image:
       name: "ghcr.io/permeenev/java-tomcat-maven-example:0.2"
       build:
-        path: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example/Dockerfile
-        source: build
+        dockerfile: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example/Dockerfile
       state: present
