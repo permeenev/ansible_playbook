@@ -10,4 +10,17 @@
 
     - name: Display the User name
       ansible.builtin.debug:
-        msg: "Hello User {{ username_on_the_host.stdout }} from Jenkins and Ansible!!"
+        msg: "Hello User {{ username_on_the_host.stdout }} prod_instance"
+
+- name: Run the test playbook
+  gather_facts: false
+  hosts: deploy_instance
+  tasks:
+    - name: Get the username running this playbook
+      become: false
+      local_action: command whoami
+      register: username_on_the_host
+
+    - name: Display the User name
+      ansible.builtin.debug:
+        msg: "Hello User {{ username_on_the_host.stdout }} deploy_instance"
