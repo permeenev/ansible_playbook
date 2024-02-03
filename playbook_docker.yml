@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: deploy_instance
   remote_user: ubuntu
   become: true
   tasks:
