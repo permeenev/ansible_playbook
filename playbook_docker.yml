@@ -1,7 +1,5 @@
 ---
 - hosts: deploy_instance
-  remote_user: ubuntu
-  become: true
   tasks:
     - name: install dependencies
       apt:
