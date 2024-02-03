@@ -11,9 +11,8 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-  - name: build container image
-    docker_image:
-      name: "ghcr.io/permeenev/java-tomcat-maven-example:0.2"
-      build:
-        path: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example/Dockerfile
-      state: present
+  - name: Build container image
+    community.docker.docker_image_build:
+      name: ghcr.io/permeenev/java-tomcat-maven-example:0.2
+      path: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example
+      dockerfile: Dockerfile
