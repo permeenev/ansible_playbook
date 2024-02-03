@@ -1,8 +1,8 @@
 [prod_instance]
-ansible_host=146.185.210.166 ansible_user=ubuntu
+146.185.210.166 ansible_user=ubuntu
  
 [deploy_instance]
-ansible_host=89.208.221.116 ansible_user=ubuntu
+89.208.221.116 ansible_user=ubuntu
 
 [all]
 146.185.210.166
