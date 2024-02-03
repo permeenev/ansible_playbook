@@ -11,7 +11,7 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-  - name: Change the working directory to somedir/ before executing the command
+  - name: Build and push docker image
     ansible.builtin.shell: |
       docker build -t ghcr.io/permeenev/java-tomcat-maven-example:0.3 .
       echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
