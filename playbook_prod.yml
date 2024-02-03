@@ -1,9 +1,9 @@
 - hosts: prod_instance
   gather_facts: no
   tasks:
-  - name: Run container
+  - name: Docker login
     ansible.builtin.shell: |
       echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
-- name: Run container
+  - name: Run container
     ansible.builtin.shell: |
       docker run -d -p 8080:8080 ghcr.io/permeenev/java-tomcat-maven-example:0.3
