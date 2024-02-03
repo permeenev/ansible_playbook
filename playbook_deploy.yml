@@ -4,7 +4,7 @@
   - name: Clone a github repository
     git:
       repo: https://github.com/daticahealth/java-tomcat-maven-example.git
-      dest: /var/lib/jenkins/workspace/ansible2/
+      dest: java-tomcat-maven-example/
       clone: yes
       update: yes
   - name: copy Dockerfile
