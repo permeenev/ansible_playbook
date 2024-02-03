@@ -2,7 +2,7 @@
 ## git clone https://github.com/daticahealth/java-tomcat-maven-example.git
 ## cd java-tomcat-maven-example
 ## docker build -t ghcr.io/permeenev/java-tomcat-maven-example:0.1 .
-## echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+## echo $CR_PAT | docker login ghcr.io -u permeenev --password-stdin
 ## docker push ghcr.io/permeenev/java-tomcat-maven-example:0.1
 #### Second step - deploy
 ## docker run -p 8080:8080 ghcr.io/permeenev/java-tomcat-maven-example:0.1
