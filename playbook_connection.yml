@@ -1,7 +1,7 @@
 ---
 - name: Run the test playbook
   gather_facts: false
-  hosts: localhost
+  hosts: prod_instance
   tasks:
     - name: Get the username running this playbook
       become: false
