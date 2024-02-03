@@ -11,8 +11,11 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-  - name: Build container image
-    docker_image_build:
-      name: ghcr.io/permeenev/java-tomcat-maven-example:0.2
-      path: java-tomcat-maven-example
-      dockerfile: Dockerfile
+  - name: Build an image and push it to a private repo
+    community.docker.docker_image:
+      build:
+        path: ./java-tomcat-maven-example
+      name: ghcr.io/permeenev/java-tomcat-maven-example
+      tag: 0.2
+      push: true
+      source: build
