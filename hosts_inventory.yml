@@ -5,5 +5,5 @@
 89.208.221.116 ansible_user=ubuntu
 
 [all]
-146.185.210.166
-89.208.221.116
+146.185.210.166 ansible_user=ubuntu
+89.208.221.116 ansible_user=ubuntu
