@@ -13,8 +13,8 @@
       dest: java-tomcat-maven-example/Dockerfile
   - name: Change the working directory to somedir/ before executing the command
     ansible.builtin.shell: |
-      docker build -t ghcr.io/permeenev/java-tomcat-maven-example:0.2 .
+      docker build -t ghcr.io/permeenev/java-tomcat-maven-example:0.3 .
       echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
-      docker push ghcr.io/permeenev/java-tomcat-maven-example:0.2
+      docker push ghcr.io/permeenev/java-tomcat-maven-example:0.3
     args:
       chdir: java-tomcat-maven-example/
