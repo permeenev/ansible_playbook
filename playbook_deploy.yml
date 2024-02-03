@@ -12,7 +12,7 @@
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
   - name: Build container image
-    community.docker.docker_image_build:
+    docker_image_build:
       name: ghcr.io/permeenev/java-tomcat-maven-example:0.2
       path: java-tomcat-maven-example
       dockerfile: Dockerfile
