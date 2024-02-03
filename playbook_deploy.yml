@@ -13,8 +13,8 @@
       dest: java-tomcat-maven-example/Dockerfile
   - name: build container image
     docker_image:
-      name: ghcr.io/permeenev/java-tomcat-maven-example:0.2
+      name: "ghcr.io/permeenev/java-tomcat-maven-example:0.2"
       build:
-        path: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example
+        path: /var/lib/jenkins/workspace/ansible2/java-tomcat-maven-example/Dockerfile
         source: build
       state: present
