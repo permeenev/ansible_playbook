@@ -1,9 +1,9 @@
 [prod_instance]
-185.86.145.146 ansible_user=ubuntu
+94.139.245.202 ansible_user=ubuntu
  
 [deploy_instance]
-89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python2.7
+89.208.198.10 ansible_user=ubuntu
 
 [all]
-185.86.145.146 ansible_user=ubuntu
-89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/bin/python2.7
+94.139.245.202 ansible_user=ubuntu
+89.208.198.10 ansible_user=ubuntu
