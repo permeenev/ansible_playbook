@@ -71,8 +71,6 @@
       community.docker.docker_image:
         name: hello-world
         source: pull
-        pull:
-          platform: amd64
     - docker_container:
         name: hello-world
         state: started
