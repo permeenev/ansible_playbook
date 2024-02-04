@@ -11,12 +11,9 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-  - name: Echo var
-    ansible.builtin.shell: |
-      echo ${9a2e8890-86ed-43b7-ab47-51ce79c70587}
   - name: Docker Login
     ansible.builtin.shell: |
-      echo ${9a2e8890-86ed-43b7-ab47-51ce79c70587} | docker login ghcr.io -u permeenev --password-stdin
+      echo $key_storage | docker login ghcr.io -u permeenev --password-stdin
     args:
       chdir: java-tomcat-maven-example/
   - name: Build an image and push it to a private repo
