@@ -3,12 +3,12 @@
   tasks:
     - name: 'Docker pull'
       community.docker.docker_image:
-        name: ghcr.io/permeenev/java-tomcat-maven-example:0.6
+        name: ghcr.io/permeenev/java-tomcat-maven-example:${version}
         source: pull
     - name: 'Container start'
       community.docker.docker_container:
-        name: 'java-tomcat-maven-example-0.6'
-        image: ghcr.io/permeenev/java-tomcat-maven-example:0.6
+        name: 'java-tomcat-maven-example-${version}'
+        image: ghcr.io/permeenev/java-tomcat-maven-example:${version}
         state: started
         restart: true
         ports:
