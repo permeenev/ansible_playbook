@@ -11,10 +11,16 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-  - name: Build and push docker image
+  - name: Docker Login
     ansible.builtin.shell: |
-      docker build -t ghcr.io/permeenev/java-tomcat-maven-example:0.4 .
       echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
-      docker push ghcr.io/permeenev/java-tomcat-maven-example:0.4
     args:
       chdir: java-tomcat-maven-example/
+  - name: Build an image and push it to a private repo
+    community.docker.docker_image:
+      build:
+        path: ./java-tomcat-maven-example
+      name: ghcr.io/permeenev/java-tomcat-maven-example
+      tag: '0.5'
+      push: true
+      source: build

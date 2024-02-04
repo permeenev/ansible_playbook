@@ -1,9 +1,9 @@
 [prod_instance]
-146.185.210.166 ansible_user=ubuntu
+185.86.145.146 ansible_user=ubuntu
  
 [deploy_instance]
-89.208.221.116 ansible_user=ubuntu
+89.208.229.81 ansible_user=ubuntu
 
 [all]
-146.185.210.166 ansible_user=ubuntu
-89.208.221.116 ansible_user=ubuntu
+185.86.145.146 ansible_user=ubuntu
+89.208.229.81 ansible_user=ubuntu
