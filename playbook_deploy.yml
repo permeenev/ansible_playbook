@@ -21,6 +21,6 @@
       build:
         path: ./java-tomcat-maven-example
       name: ghcr.io/permeenev/java-tomcat-maven-example
-      tag: ${version}
+      tag: '{{ version }}'
       push: true
       source: build
