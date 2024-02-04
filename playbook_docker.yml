@@ -67,7 +67,8 @@
       pip:
         name: docker
     ##### test
-    - docker_image:
+    - name: 'Docker pull'
+      community.docker.docker_image:
         name: hello-world
         source: pull
         pull:
