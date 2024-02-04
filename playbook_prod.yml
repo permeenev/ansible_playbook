@@ -5,6 +5,20 @@
       community.docker.docker_image:
         name: ghcr.io/permeenev/java-tomcat-maven-example:{{ version }}
         source: pull
+    - name: Log into private docker registry 
+      community.docker.docker_login:
+        registry_url: ghcr.io
+        username: permeenev
+        password: '{{ key_storage }}'
+    - name: Get running containers
+      docker_host_info:
+        containers: yes
+      register: docker_info
+    - name: Stop running containers
+      docker_container:
+        name: "{{ item }}"
+        state: stopped
+      loop: "{{ docker_info.containers | map(attribute='Id') | list }}"
     - name: 'Container start'
       community.docker.docker_container:
         name: 'java-tomcat-maven-example-{{ version }}'
