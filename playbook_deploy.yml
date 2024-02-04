@@ -15,7 +15,7 @@
     community.docker.docker_login:
       registry_url: ghcr.io
       username: permeenev
-      password: ${{ key_storage }}
+      password: ${key_storage}
   - name: Build an image and push it to a private repo
     community.docker.docker_image:
       build:
