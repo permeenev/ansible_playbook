@@ -13,7 +13,7 @@
       dest: java-tomcat-maven-example/Dockerfile
   - name: Docker Login
     ansible.builtin.shell: |
-      echo $9a2e8890-86ed-43b7-ab47-51ce79c70587 | docker login ghcr.io -u permeenev --password-stdin
+      echo "$9a2e8890-86ed-43b7-ab47-51ce79c70587" | docker login ghcr.io -u permeenev --password-stdin
     args:
       chdir: java-tomcat-maven-example/
   - name: Build an image and push it to a private repo
