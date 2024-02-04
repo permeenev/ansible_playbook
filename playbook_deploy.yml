@@ -21,6 +21,6 @@
       build:
         path: ./java-tomcat-maven-example
       name: ghcr.io/permeenev/java-tomcat-maven-example
-      tag: '0.5'
+      tag: '0.6'
       push: true
       source: build

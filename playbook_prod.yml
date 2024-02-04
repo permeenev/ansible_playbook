@@ -3,10 +3,14 @@
   tasks:
     - name: 'Docker pull'
       community.docker.docker_image:
-        name: ghcr.io/permeenev/java-tomcat-maven-example:0.5
+        name: ghcr.io/permeenev/java-tomcat-maven-example:0.6
         source: pull
-    - name: 'Container present'
+    - name: 'Container start'
       community.docker.docker_container:
-        name: 'java-tomcat-maven-example-0.5'
-        state: present
-        image: ghcr.io/permeenev/java-tomcat-maven-example:0.5
+        name: 'java-tomcat-maven-example-0.6'
+        image: ghcr.io/permeenev/java-tomcat-maven-example:0.6
+        state: started
+        restart: true
+        ports:
+        # Publish container port 8080 as host port 8080
+        - "8080:8080"
