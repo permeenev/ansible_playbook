@@ -2,8 +2,8 @@
 185.86.145.146 ansible_user=ubuntu
  
 [deploy_instance]
-89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/lib/python3
+89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/lib/python2.7
 
 [all]
 185.86.145.146 ansible_user=ubuntu 
-89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/lib/python3
+89.208.229.81 ansible_user=ubuntu ansible_python_interpreter=/usr/lib/python2.7
