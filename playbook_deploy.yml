@@ -11,11 +11,11 @@
     ansible.builtin.copy:
       src: ./Dockerfile
       dest: java-tomcat-maven-example/Dockerfile
-#  - name: Log into private docker registry 
-#    community.docker.docker_login:
-#      registry_url: ghcr.io
-#      username: permeenev
-#      password: "{{key_storage}}"
+  - name: Log into private docker registry 
+    community.docker.docker_login:
+      registry_url: ghcr.io
+      username: permeenev
+      password: '{{ key_storage }}'
   - name: Build an image and push it to a private repo
     community.docker.docker_image:
       build:
