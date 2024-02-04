@@ -71,6 +71,8 @@
       community.docker.docker_image:
         name: hello-world
         source: pull
-    - docker_container:
+    - name: 'Container present'
+      community.docker.docker_container:
         name: hello-world
-        state: started
+        state: present
+        image: hello-world
