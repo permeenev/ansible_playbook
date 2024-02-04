@@ -13,7 +13,7 @@
       dest: java-tomcat-maven-example/Dockerfile
   - name: Docker Login
     ansible.builtin.shell: |
-      echo $key_storage | docker login ghcr.io -u permeenev --password-stdin
+      docker login ghcr.io -u permeenev -p $key_storage 
     args:
       chdir: java-tomcat-maven-example/
   - name: Build an image and push it to a private repo
